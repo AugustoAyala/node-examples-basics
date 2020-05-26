@@ -11,12 +11,13 @@ myEmitter.on('event', () => {
 myEmitter.emit('event');
 
 myEmitter1.on('event1', function(a, b) {
-    console.log(a, b, this, this === myEmitter1);
-    // Prints:
-    //   a b MyEmitter {
-    //     domain: null,
-    //     _events: { event: [Function] },
-    //     _eventsCount: 1,
-    //     _maxListeners: undefined } true
-  });
-  myEmitter1.emit('event1', 'a', 'b');
+  console.log(a, b, this, this === myEmitter1);
+  // Prints:
+  //   a b MyEmitter {
+  //     domain: null,
+  //     _events: { event: [Function] },
+  //     _eventsCount: 1,
+  //     _maxListeners: undefined } true
+});
+
+myEmitter1.emit('event1', 'a', 'b');
